@@ -171,7 +171,7 @@ class Sprite {
     }
 
     flock(boids) {
-        // let alignment = this.align(boids);
+        let alignment = this.align(boids);
         let cohesion = this.cohesion(boids);
         let separation = this.separation(boids);
 
@@ -179,7 +179,7 @@ class Sprite {
         // cohesion.mult(cohesionSlider.value());
         // separation.mult(separationSlider.value());
 
-        // this.acceleration.add(alignment);
+        this.acceleration.add(alignment);
         this.acceleration.add(cohesion);
         this.acceleration.add(separation);
     }

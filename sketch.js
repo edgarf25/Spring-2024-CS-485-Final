@@ -69,10 +69,16 @@ function setup() {
 }
 
 let count = -1
+setInterval(() => {
+  count += 1
+  if (count === 5)
+    count = 0;
+}, 200)
+
+
+
 function draw() {
 
-
-  count += 1;
   console.log(count);
   if (count === 0)
     background(bg1)
@@ -88,8 +94,8 @@ function draw() {
     background(bg6)
 
 
-  if (count === 5)
-    count = -1;
+  // if (count === 5)
+  //   count = -1;
 
 
   for (let boid of flock) {
